@@ -1,0 +1,538 @@
+@import url("base.css");
+
+body{
+    background-color: var(--marrom);
+}
+
+/* Inicio */
+
+header {
+    background-image: url("../IMG/HeaderHorizontal.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    height: 90vh;
+    padding: 100px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+}
+
+nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 40px;
+
+    height: 10%;
+    width: 500px;
+    gap: 40px;
+
+    background-color: #f2f5ea42;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+
+    color: var(--branco);
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+}
+
+.logo-nav img {
+    width: 100px;
+    border-radius: 100%;
+}
+
+.texts-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: 40px;
+    margin-top: 100px;
+
+    gap: 40px;
+}
+
+.texts-header h1 {
+    width: 40%;
+    font-size: 60px;
+    color: var(--branco);
+
+    font-family: 'Chetta';
+    font-weight: 100;
+}
+
+.texts-header button {
+    background-color: var(--branco);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 40px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    color: var(--marrom);
+
+    box-shadow: var(--shadow);
+    transition: 300ms;
+}
+
+.texts-header button:hover {
+    background-color: var(--bege);
+    color: var(--branco);
+    transform: scale(0.98);
+}
+
+.seta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seta img {
+    width: 50px;
+    animation: move 1.1s infinite ease-in-out;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(20px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+
+}
+
+/* Sobre mim */
+
+.sobre-mim {
+    padding: 60px 80px;
+    background-color: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    border-radius: 0px 0px 50px 50px;
+    box-shadow: var(--shadow);
+    z-index: 99;
+}
+
+.img-sobre img {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+
+    border-radius: 500px 500px 0px 0px;
+    border: 2px solid var(--marrom);
+    box-shadow: var(--shadow);
+}
+
+.text-sobre {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    color: var(--marrom);
+}
+
+.text-sobre span {
+    font-family: 'Chetta';
+    font-weight: 100;
+    font-size: 32px;
+}
+
+.text-sobre button {
+    background-color: var(--marrom);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 40px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    color: var(--branco);
+
+    box-shadow: var(--shadow);
+    transition: 300ms;
+}
+
+.text-sobre button:hover {
+    background-color: var(--bege);
+    color: var(--branco);
+    transform: scale(0.98);
+}
+
+.text-sobre a {
+    width: 281.01px;
+}
+
+/* Serviços */
+
+.servicos {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    z-index: 1;
+}
+
+.titulos {
+    width: 100%;
+    text-align: center;
+    color: var(--branco);
+    font-family: 'Chetta';
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.titulos p{
+    width: 100%;
+    text-align: center;
+    color: var(--branco);
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Estilização da seção de depoimentos */
+section#depoimentos-secao {
+    position: relative;
+}
+
+/* Estilização dos botôes do carousel */
+#depoimentos-secao .carousel-button {
+    position: absolute;
+    top: calc(50% - 18px);
+
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    background-color: var(--bege);
+    color: rgba(0, 0, 0, .5);
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    transition: all 150ms ease-in-out;
+}
+
+#depoimentos-secao .carousel-button:hover {
+    top: calc(50% - 20px);
+    height: 40px;
+    width: 40px;
+    background-color: var(--branco);
+    color: var(--preto);
+    font-size: 35px;
+}
+
+/* Posicionamento dos botões do carousel */
+#depoimentos-secao #anterior {
+    left: -5%;
+}
+
+#depoimentos-secao #proximo {
+    right: -5%;
+}
+
+/* Estilização da div onde estarão os depoimentos*/
+#depoimentos {
+    margin: 0 auto;
+    width: 1000px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+
+/* Estilização dos cards de depoimento */
+.depoimento {
+    flex-shrink: none;
+    flex-grow: none;
+    scroll-behavior: smooth;
+    padding: 20px;
+    min-height: 360px;
+    min-width: 320px;
+    border-radius: 25px 0px 25px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Colorização dos cards de depoimento */
+.depoimento:nth-child(3n + 1) {
+    background-color: var(--branco);
+}
+
+.depoimento:nth-child(3n + 2) {
+    background-color: var(--branco);
+}
+
+.depoimento:nth-child(3n + 3) {
+    background-color: var(--branco);
+}
+
+.depoimento img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 25px 0px 25px 0px;
+    border: solid 1px var(--marrom);
+}
+
+.depoimento h1 {
+    width: 200px;
+    text-align: center;
+    color: var(--marrom);
+    font-family: 'Chetta';
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.depoimento p {
+    text-align: center;
+    color: var(--marrom);
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Media query para ajustar as propriedades vistas anteriormente para celular*/
+@media screen and (max-width: 620px) {
+    section#depoimentos-secao {
+        padding: 20px 10px 20px 10px;
+    }
+
+    #depoimentos-secao button#anterior {
+        width: 50px;
+        height: 50px;
+        left: 0;
+    }
+
+    #depoimentos-secao button#proximo {
+        width: 50px;
+        height: 50px;
+        right: 0;
+    }
+
+    #depoimentos-secao div#depoimentos {
+        max-width: 300px;
+        gap: 57.5px;
+    }
+
+    .depoimento {
+        min-width: 100%;
+        max-width: 300px
+    }
+}
+
+/* Media query para ajustar as propriedades vistas anteriormente para telas intermediárias*/
+@media screen and (min-width: 621px) and (max-width: 750px) {
+    #depoimentos-secao {
+        min-width: 600px;
+        padding: 0;
+    }
+
+    #depoimentos {
+        width: 500px;
+    }
+
+    .depoimento {
+        min-width: 250px;
+        max-width: 250px;
+    }
+}
+
+/* Media query para ajustar as propriedades vistas anteriormente para tablets*/
+@media screen and (min-width: 751px) and (max-width: 1100px) {
+    section#depoimentos-secao {
+        padding: 50px 0;
+        min-width: 72px;
+    }
+
+    #depoimentos-secao button#anterior {
+        left: 0;
+    }
+
+    #depoimentos-secao button#proximo {
+        right: 0;
+    }
+
+    #depoimentos {
+        min-width: 700px;
+        max-width: 700px;
+        gap: 20px;
+    }
+}
+
+.servicos a button {
+    background-color: var(--branco);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 40px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    color: var(--marrom);
+
+    box-shadow: var(--shadow);
+    transition: 300ms;
+}
+
+.servicos a button:hover {
+    background-color: var(--bege);
+    color: var(--branco);
+    transform: scale(0.98);
+}
+
+.contato{
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    z-index: 1;
+}
+
+.container-contato{
+    background-color: var(--branco);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    border-radius: 20px;
+    gap: 40px;
+
+    box-shadow: var(--shadow);
+}
+
+.container-contato h1{
+    width: 200px;
+    color: var(--marrom);
+    font-family: 'Chetta';
+    font-weight: 100;
+    font-size: 28px;
+}
+
+.container-contato p, 
+.container-contato span{
+    color: var(--marrom);
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.container-infos{
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    height: 100%;
+    width: 100%;
+}
+
+form input, 
+form button{
+    padding: 15px;
+    width: 100%;
+    transition: 300ms;
+}
+
+form input{
+    border: solid 3px var(--marrom);
+    background-color: transparent;
+    color: var(--marrom);
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+form input::placeholder{
+    color: var(--marrom);
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+form input:focus{
+    border: solid 3px var(--bege);
+    background-color: var(--marrom);
+    color: var(--branco);
+}
+
+form button{
+    border: none;
+    background-color: var(--marrom);
+    color: var(--branco);
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form button:hover{
+    background-color: var(--bege);
+    color: var(--branco);
+
+    border-radius: 40px;
+}
+
+/* Rodapé */
+
+footer{
+    padding: 20px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+.container-cima{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.container-part1 img{
+    width: 200px;
+    margin-left: -40px;
+}
+
+.container-baixo{
+    padding-top: 20px;
+    border-top: 2px solid var(--branco);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}

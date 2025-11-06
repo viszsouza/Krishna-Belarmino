@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variaveis */
+:root {
+    --branco: #F2F5EA;
+    --bege: #B29784;
+    --marrom: #6D3D14;
+    --preto: #000;
+    --shadow: #00000063 0px 5px 20px;
+}
+
+/* Fontes */
+/*
+@font-face {
+    font-family: 'Alta';
+    src: url('/fontes/alta-regular.otf') format('opentype');
+}
+*/
+
+@font-face {
+    font-family: 'Chetta';
+    src: url('../FONTS/ChettaVissto.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NexaHeavy';
+    src: url('../fonts/Nexa-Heavy.ttf') format('truetype');
+}
+
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Estilo para impedir de selecionar imagens e arrastá-las pela tela */
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Barra de rolagem */
+body::-webkit-scrollbar {
+    width: 5px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--bege);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--marrom);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: none;
+    /* creates padding around scroll thumb */
+}
