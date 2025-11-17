@@ -1,3 +1,22 @@
+
+// BANNER
+const frases = [
+        "BLACK FRIDAY ",
+        "",
+        "",
+        "Limpeza de pele premium + Massagem Relaxante (30min) ",
+        "",
+        "",
+        "Revitalização facial + Drenagem facial ",
+        "",
+        "",
+        "Limpeza de pele Premium + Spa Hydra Lips + Massagem relaxante (30min) "
+    ];
+
+    // Junta as frases em uma única sequência para loop continuo
+    document.getElementById("texto").textContent = frases.join("  -  ");
+
+
 // CARROSSEL
 // Index do item do meio atual
 let currentIndex = window.innerWidth <= 750 ? 0 : 1;
@@ -41,27 +60,28 @@ function moverCarrossel(direcao) {
 
 // 🔁 Autoplay: mover automaticamente a cada 2 segundos
 //setInterval(() => {
-    //moverCarrossel('proximo');
+//moverCarrossel('proximo');
 //}, 2000);
 
+// FORMULÁRIO
+document.getElementById("contatoForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // impede o envio normal do form
 
-document.getElementById("contatoForm").addEventListener("submit", function(e) {
-        e.preventDefault(); // impede o envio normal do form
+    // Coletando os valores
+    let nome = document.getElementById("nome").value;
+    let telefone = document.getElementById("telefone").value;
+    let mensagem = document.getElementById("mensagem").value;
 
-        // Coletando os valores
-        let nome = document.getElementById("nome").value;
-        let telefone = document.getElementById("telefone").value;
-        let mensagem = document.getElementById("mensagem").value;
+    // Número do WhatsApp que vai receber a mensagem (inclua DDD e país sem símbolos)
+    let numeroDestino = "558198731306";
 
-        // Número do WhatsApp que vai receber a mensagem (inclua DDD e país sem símbolos)
-        let numeroDestino = "558198731306"; 
+    // Montando o texto formatado
+    let texto = `Olá! Meu nome é ${nome}%0A📱 Telefone: ${telefone}%0A✉️ Mensagem: ${mensagem}`;
 
-        // Montando o texto formatado
-        let texto = `Olá! Meu nome é ${nome}%0A📱 Telefone: ${telefone}%0A✉️ Mensagem: ${mensagem}`;
+    // Criando o link do WhatsApp
+    let link = `https://wa.me/${numeroDestino}?text=${texto}`;
 
-        // Criando o link do WhatsApp
-        let link = `https://wa.me/${numeroDestino}?text=${texto}`;
+    // Redireciona para o WhatsApp
+    window.open(link, "_blank");
+});
 
-        // Redireciona para o WhatsApp
-        window.open(link, "_blank");
-    });
