@@ -43,3 +43,25 @@ function moverCarrossel(direcao) {
 //setInterval(() => {
     //moverCarrossel('proximo');
 //}, 2000);
+
+
+document.getElementById("contatoForm").addEventListener("submit", function(e) {
+        e.preventDefault(); // impede o envio normal do form
+
+        // Coletando os valores
+        let nome = document.getElementById("nome").value;
+        let telefone = document.getElementById("telefone").value;
+        let mensagem = document.getElementById("mensagem").value;
+
+        // Número do WhatsApp que vai receber a mensagem (inclua DDD e país sem símbolos)
+        let numeroDestino = "558198731306"; 
+
+        // Montando o texto formatado
+        let texto = `Olá! Meu nome é ${nome}%0A📱 Telefone: ${telefone}%0A✉️ Mensagem: ${mensagem}`;
+
+        // Criando o link do WhatsApp
+        let link = `https://wa.me/${numeroDestino}?text=${texto}`;
+
+        // Redireciona para o WhatsApp
+        window.open(link, "_blank");
+    });

@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khrisna Belarmino | Esteticista</title>
+    <link rel="shortcut icon" href="IMG/LogoPNG.png" type="image/x-icon">
+
+    <!-- META TAG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Khrisna Belarmino" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="“Cuidar da sua pele é um ato de amor próprio.”" />
+    <meta property="og:site_name" content="Khrisna Belarmino" />
 
     <!-- Link's -->
     <link rel="stylesheet" href="CSS/index.css">
@@ -20,19 +28,19 @@
         <nav>
 
             <div class="logo-nav">
-                <img src="IMG/LogoBranca.jpg" alt="Logo Khrisna Belarmino | Esteticista">
+                <a href=""><img src="IMG/LogoBranca.jpg" alt="Logo Khrisna Belarmino | Esteticista"></a>
             </div>
 
-            <p>Home</p>
-            <p>Serviços</p>
-            <p>Contato</p>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
 
         </nav>
 
         <div class="texts-header">
             <h1>“Cuidar da sua pele é um ato de amor próprio.”</h1>
 
-            <a href=""><button>Agendar atendimento</button></a>
+            <a href="#contato"><button>Agendar atendimento</button></a>
         </div>
 
         <div class="seta">
@@ -43,7 +51,7 @@
 
     <!-- Sobre mim -->
 
-    <section class="sobre-mim">
+    <section class="sobre-mim" id="sobre">
 
         <div class="img-sobre">
             <img src="IMG/FotoSobreMim.jpg" alt="Foto Khrisna Belarmino">
@@ -55,14 +63,14 @@
 
                 Acredito que cada pessoa merece um cuidado exclusivo, e por isso criei minha metodologia de atendimento:
                 protocolo individualizado e humanizado, sempre voltado à necessidade de cada paciente.</p>
-            <a href=""><button>Agendar atendimento</button></a>
+            <a href="#contato"><button>Agendar atendimento</button></a>
         </div>
 
     </section>
 
     <!-- Serviços -->
 
-    <section class="servicos">
+    <section class="servicos" id="servicos">
         <div class="titulos">
             <h1>Tratamentos personalizados para a sua pele.</h1>
             <p>Conheça os procedimentos disponíveis e descubra qual é ideal para você.</p>
@@ -115,14 +123,14 @@
         </section>
         <!-- Fim Depoimentos -->
 
-        <a href=""><button>Agendar atendimento</button></a>
+        <a href="#contato"><button>Agendar atendimento</button></a>
 
     </section>
 
     <!-- Contato -->
-    <section class="contato">
+    <section class="contato" id="contato">
         <div class="container-contato">
-            
+
             <div class="container-text">
                 <h1>Fale comigo</h1>
                 <p>Tire suas dúvidas, agende sua consulta ou envie sua mensagem.</p>
@@ -133,10 +141,10 @@
                 </div>
             </div>
 
-            <form action="">
-                <input type="text" name="" id="" placeholder="Nome:">
-                <input type="text" name="" id="" placeholder="Telefone/WhatsApp:">
-                <input type="text" name="" id="" placeholder="Mensagem:">
+            <form id="contatoForm">
+                <input type="text" id="nome" placeholder="Nome:" required>
+                <input type="text" id="telefone" placeholder="Telefone/WhatsApp:" required>
+                <input type="text" id="mensagem" placeholder="Mensagem:" required>
 
                 <button type="submit">Falar no WhatsApp</button>
             </form>
