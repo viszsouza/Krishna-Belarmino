@@ -25,7 +25,7 @@
 
     <header>
 
-        <nav>
+        <nav class="hidden">
 
             <div class="logo-nav">
                 <a href=""><img src="IMG/LogoBranca.jpg" alt="Logo Krishna Belarmino | Esteticista"></a>
@@ -37,10 +37,10 @@
 
         </nav>
 
-        <div class="texts-header">
-            <h1>“Cuidar da sua pele é um ato de amor próprio.”</h1>
+        <div class="texts-header hidden2">
+            <h1 class="hidden2">“Cuidar da sua pele é um ato de amor próprio.”</h1>
 
-            <a href="#contato"><button>Agendar atendimento</button></a>
+            <a href="#contato" class="hidden2"><button>Agendar atendimento</button></a>
         </div>
 
         <div class="seta">
@@ -59,17 +59,17 @@
 
     <section class="sobre-mim" id="sobre">
 
-        <div class="img-sobre">
+        <div class="img-sobre hidden2">
             <img src="IMG/FotoSobreMim.jpg" alt="Foto Krishna Belarmino">
         </div>
 
-        <div class="text-sobre">
+        <div class="text-sobre hidden">
             <p>Sou <span>Krishna Belarmino</span>, esteticista e cosmetóloga formada, especialista em saúde da pele e
                 procedimentos estéticos. <br><br>
 
                 Acredito que cada pessoa merece um cuidado exclusivo, e por isso criei minha metodologia de atendimento:
                 protocolo individualizado e humanizado, sempre voltado à necessidade de cada paciente.</p>
-            <a href="#contato"><button>Agendar atendimento</button></a>
+            <a href="#contato" class="hidden"><button>Agendar atendimento</button></a>
         </div>
 
     </section>
@@ -77,7 +77,7 @@
     <!-- Serviços -->
 
     <section class="servicos" id="servicos">
-        <div class="titulos">
+        <div class="titulos hidden2">
             <h1>Tratamentos personalizados para a sua pele.</h1>
             <p>Conheça os procedimentos disponíveis e descubra qual é ideal para você.</p>
         </div>
@@ -126,7 +126,7 @@
     <section class="contato" id="contato">
         <div class="container-contato">
 
-            <div class="container-text">
+            <div class="container-text hidden">
                 <h1>Fale comigo</h1>
                 <p>Tire suas dúvidas, agende sua consulta ou envie sua mensagem.</p>
 
@@ -136,7 +136,7 @@
                 </div>
             </div>
 
-            <form id="contatoForm">
+            <form id="contatoForm" class="hidden2">
                 <input type="text" id="nome" placeholder="Nome:" required>
                 <input type="text" id="telefone" placeholder="Telefone/WhatsApp:" required>
                 <input type="text" id="mensagem" placeholder="Mensagem:" required>
